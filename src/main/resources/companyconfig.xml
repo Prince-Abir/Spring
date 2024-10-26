@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    <c:annotation-config/>-->
+
+
+<!--    <bean class="com.springcore.constructorInjection.Jobs" name="job">-->
+
+<!--        <property name="jobId" value="111"/>-->
+<!--        <property name="jobTitle" value="Designer"/>-->
+<!--        <property name="salary" value="10000"/>-->
+
+<!--    </bean>-->
+
+
+<!--    <bean class="com.springcore.constructorInjection.Company" name="company">-->
+
+<!--        <property name="companyName" value="XYZ Company"/>-->
+<!--        <property name="totalEmployee" value="100"/>-->
+<!--        <property name="jobs" ref="job"/>-->
+
+<!--        &lt;!&ndash;        <property name="jobs">&ndash;&gt;-->
+<!--        &lt;!&ndash;            <ref bean="job"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </property>&ndash;&gt;-->
+
+
+<!--    </bean>-->
+
+<!--    <bean class="com.springcore.constructorInjection.Company" name="company2">-->
+<!--        <constructor-arg name="companyName" value="AbirCompany" type="String"/>-->
+<!--        <constructor-arg name="totalEmployee" value="10" type="int"/>-->
+<!--        <constructor-arg name="jobs" ref="job"/>-->
+<!--    </bean>-->
+
+<!--    <bean class="com.springcore.constructorInjection.Items" name="item1" init-method="init" destroy-method="destroy">-->
+<!--        <property name="price" value="10"/>-->
+
+<!--    </bean>-->
+<!--    <bean class="com.springcore.constructorInjection.Items" name="item2">-->
+<!--        <property name="price" value="20"/>-->
+
+<!--    </bean>-->
+
+    <bean class="com.springcore.constructorInjection.BeanLifeCycleWithAnnotations" name="product">
+        <property name="price" value="30"/>
+
+    </bean>
+
+</beans>

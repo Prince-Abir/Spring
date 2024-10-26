@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <util:list id="phones" list-class="java.util.LinkedList">
+
+        <value>"01120"</value>
+        <value>35353</value>
+        <value>434343</value>
+        <value>765533</value>
+
+    </util:list>
+
+    <util:set id="address" set-class="java.util.HashSet">
+        <value>Dhaka</value>
+        <value>CTG</value>
+        <value>Khulna</value>
+        <value>Barishal</value>
+    </util:set>
+
+    <util:map id="courses" map-class="java.util.HashMap">
+        <entry key="Java" value="6000"/>
+        <entry key="Python" value="4000"/>
+        <entry key="C++" value="3000"/>
+        <entry key=".NET" value="6000"/>
+    </util:map>
+
+    <util:properties id="con">
+        <prop key="driver">com.mysql.jdbc.Driver</prop>
+        <prop key="username">root</prop>
+        <prop key="password">12345</prop>
+        <prop key="url">mysql:jdbc://localhost:3306/mydb</prop>
+    </util:properties>
+
+    <bean class="standalone.Person" name="person1">
+
+        <property name="name">
+            <value>Abir</value>
+        </property>
+
+        <property name="phones" ref="phones"/>
+
+        <property name="addresses">
+            <ref bean="address"/>
+        </property>
+
+        <property name="courses">
+            <ref bean="courses"/>
+        </property>
+
+        <property name="pros" ref="con"/>
+    </bean>
+</beans>
